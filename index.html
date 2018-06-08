@@ -35,7 +35,7 @@
 						</li>
 					</ul>
 					<form class="form-inline my-2 my-lg-0">
-						<input class="form-control mr-sm-2" type="text" placeholder="Search">
+						<input class="form-control mr-sm-2" type="text" placeholder="Search todo..." id="searchListitem">
 						<button class="btn btn-secondary my-2 my-sm-0" type="button">Logout</button>
 					</form>
 				</div>
@@ -57,10 +57,15 @@
 
 						</ul>
 						<hr>
+						<ul class="list-group my-3" id="completed">
+
+						</ul>
 					</div>
 					<div class="col-md-7">
 						<div class="section-logo">
-							<img class="img-responsive" src="https://help.pandasuite.com/resources/AVfYf-idqsg5m25GTXvd/firebase-dot-png" alt="">
+							<a target="_blank" title="Firebase official site" href="https://firebase.google.com/">
+								<img class="img-responsive" src="https://help.pandasuite.com/resources/AVfYf-idqsg5m25GTXvd/firebase-dot-png" alt="Firebase">
+							</a>
 						</div>
 					</div>
 				</div>
@@ -68,25 +73,81 @@
 		</section>
 	</main>
 
-	<footer class="footer">
-		<div class="container">
-			&copy; 2018 Farid Mirzayev
+	<footer class="page-footer font-small bg-dark">
+		<div class="container text-center text-md-left">
+			<div class="row mt-3">
+				<div class="col-md-3 col-lg-4 col-xl-3 mb-4">
+					<div class="logo">
+						<a class="navbar-brand" href="index.html">
+							<img class="img-responsive" src="https://firebase.google.com/_static/images/firebase/touchicon-180.png" alt="firebase logo">
+						</a>
+					</div>
+					<hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+					<p>Firebase gives you functionality like analytics, databases, messaging and crash reporting so you can move quickly and
+						focus on your users.
+					</p>
+				</div>
+				<div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+					<h6 class="text-uppercase font-weight-bold">Products</h6>
+					<p>
+						<a class="dark-grey-text" href="https://firebase.google.com/products/firestore/">Cloud Firestore</a>
+					</p>
+					<p>
+						<a class="dark-grey-text" href="https://firebase.google.com/products/ml-kit/">ML Kit</a>
+					</p>
+					<p>
+						<a class="dark-grey-text" href="https://firebase.google.com/products/auth/">Firebase Authentication</a>
+					</p>
+					<p>
+						<a class="dark-grey-text" href="https://firebase.google.com/products/storage/">Cloud Storage</a>
+					</p>
+					<p>
+						<a class="dark-grey-text" href="https://firebase.google.com/products/realtime-database/">Realtime Database</a>
+					</p>
+
+				</div>
+				<div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+
+					<!-- Links -->
+					<h6 class="text-uppercase font-weight-bold">Useful links</h6>
+					<hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+					<p>
+						<a class="dark-grey-text" href="#!">Your Account</a>
+					</p>
+					<p>
+						<a class="dark-grey-text" href="#!">Become an Affiliate</a>
+					</p>
+					<p>
+						<a class="dark-grey-text" href="#!">Shipping Rates</a>
+					</p>
+					<p>
+						<a class="dark-grey-text" href="#!">Help</a>
+					</p>
+
+				</div>
+				<div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+
+					<!-- Links -->
+					<h6 class="text-uppercase font-weight-bold">Contact</h6>
+					<hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+					<p>
+						<i class="fa fa-home mr-3"></i> New York, NY 10012, US</p>
+					<p>
+						<i class="fa fa-envelope mr-3"></i> info@example.com</p>
+					<p>
+						<i class="fa fa-phone mr-3"></i> + 01 234 567 88</p>
+					<p>
+						<i class="fa fa-print mr-3"></i> + 01 234 567 89</p>
+
+				</div>
+			</div>
+		</div>
+		<div class="footer-copyright text-center py-2">© 2018 Copyright:
+			<a href="https://github.com/mirzayev"> Farid Mirzayev</a>
 		</div>
 	</footer>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/js/bootstrap.min.js'></script>
 	<script src="app.js"></script>
 </body>
 

@@ -24,6 +24,7 @@ body {
 }
 
 main {
+  min-height: 100vh;
   /* background-color: darkcyan; */
   padding: 3em;
   flex: 1;
@@ -34,10 +35,23 @@ footer {
   text-align: center;
   color: #e4e4e4;
 }
-
+a {
+  font-weight: 500;
+  color: #fff;
+  transition: 0.4s;
+}
+a:hover {
+  color: #ffc825 !important;
+  text-decoration: none;
+}
 .textfield {
   display: none;
-  border-radius: 3px;
+  /* border-radius: 3px; */
+}
+.completed,
+.completed:hover {
+  text-decoration: line-through;
+  opacity: 0.5;
 }
 .button {
   appearance: none;
@@ -47,9 +61,18 @@ footer {
   outline: none;
   cursor: pointer;
 }
-.list-group-item.editMode #editInput {
+.list-group-item.editMode .textfield {
   display: block;
 }
 .list-group-item.editMode label {
   display: none;
+}
+#todoList li,
+#completed li {
+  display: flex;
+  transition: all 0.3s ease-in;
+}
+#todoList li:hover,
+#completed li:hover {
+  background-color: #e4e4e4;
 }
