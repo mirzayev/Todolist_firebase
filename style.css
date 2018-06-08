@@ -1,0 +1,55 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,500,700");
+@import url("https://fonts.googleapis.com/css?family=Raleway:400,500,700");
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.logo {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-responsive {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+main {
+  /* background-color: darkcyan; */
+  padding: 3em;
+  flex: 1;
+}
+footer {
+  background-color: #444;
+  padding: 10px;
+  text-align: center;
+  color: #e4e4e4;
+}
+
+.textfield {
+  display: none;
+  border-radius: 3px;
+}
+.button {
+  appearance: none;
+  -webkit-appearance: none;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.list-group-item.editMode #editInput {
+  display: block;
+}
+.list-group-item.editMode label {
+  display: none;
+}

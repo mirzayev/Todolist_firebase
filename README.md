@@ -1,2 +1,3 @@
 # Todolist_Firebase
-Fullstack todolist app with Firebase 
+
+Fullstack todolist app with Firebase

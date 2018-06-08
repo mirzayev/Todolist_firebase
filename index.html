@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Todolist with Firebase</title>
+	<link rel='stylesheet' href='https://bootswatch.com/4/simplex/bootstrap.min.css' />
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+	<header>
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+			<div class="container">
+				<div class="logo">
+					<a class="navbar-brand" href="index.html">
+						<img class="img-responsive" src="https://firebase.google.com/_static/images/firebase/touchicon-180.png" alt="firebase logo">
+					</a>
+				</div>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03" aria-controls="navbarColor03"
+				 aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+
+				<div class="collapse navbar-collapse" id="navbarColor03">
+					<ul class="navbar-nav mr-auto">
+						<li class="nav-item">
+							<a class="nav-link" href="#">HOME</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">ABOUT</a>
+						</li>
+					</ul>
+					<form class="form-inline my-2 my-lg-0">
+						<input class="form-control mr-sm-2" type="text" placeholder="Search">
+						<button class="btn btn-secondary my-2 my-sm-0" type="button">Logout</button>
+					</form>
+				</div>
+			</div>
+		</nav>
+	</header>
+	<main role="main">
+		<section id="todo-section">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-5">
+						<form id="main-form">
+							<div class="form-group">
+								<input type="text" class="form-control" placeholder="Add todo..." id="todoInput">
+							</div>
+							<button type="submit" class="btn btn-outline-success pull-right">Add</button>
+						</form>
+						<ul class="list-group my-3" id="todoList">
+
+						</ul>
+						<hr>
+					</div>
+					<div class="col-md-7">
+						<div class="section-logo">
+							<img class="img-responsive" src="https://help.pandasuite.com/resources/AVfYf-idqsg5m25GTXvd/firebase-dot-png" alt="">
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<footer class="footer">
+		<div class="container">
+			&copy; 2018 Farid Mirzayev
+		</div>
+	</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<script src="app.js"></script>
+</body>
+
+</html>
