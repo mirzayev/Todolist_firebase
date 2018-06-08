@@ -76,3 +76,7 @@ a:hover {
 #completed li:hover {
   background-color: #e4e4e4;
 }
+
+.disabled {
+  pointer-events: none;
+}
