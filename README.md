@@ -4,7 +4,7 @@ Fullstack todolist app with Firebase
 
 ![firebase](https://help.pandasuite.com/resources/AVfYf-idqsg5m25GTXvd/firebase-dot-png "Firebase")
 
-You can use this app via [this](https://www.google.com) website
+You can use this app via [this](https://todo-firebase.herokuapp.com/) website
 
 ## Used techs
 
