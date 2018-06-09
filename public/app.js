@@ -164,15 +164,31 @@
     messagingSenderId: "320355228892"
   };
   firebase.initializeApp(config);
-
+  let current_user = "";
   firebase.auth().onAuthStateChanged(user => {
     if (user) {
+      current_user = user.uid;
+      // console.log(current_user);
       $("#signOut").on("click", e => {
         firebase
           .auth()
           .signOut()
           .then(e => {
             window.location.href = "../public/register/login.html";
+          });
+      });
+
+      $("#sendFirebase").on("click", e => {
+        const todoItem = $("#todoInput").val();
+        firebase
+          .database()
+          .ref()
+          .child("users")
+          .child(current_user)
+          .child("todo")
+          .push({
+            completed: false,
+            description: todoItem
           });
       });
     }

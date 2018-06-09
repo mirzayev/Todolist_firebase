@@ -9,6 +9,7 @@ app.use(express.static(__dirname + "/public"));
 app.get("/", function(req, res) {
   res.render("/public/register/register");
 });
+
 app.get("/login", function(req, res) {
   res.render("/public/register/login");
 });
