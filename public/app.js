@@ -48,12 +48,12 @@
     });
     const editIcon = createElement(
       "i",
-      { className: "material-icons" },
+      { className: "material-icons material-edit" },
       "edit"
     );
     const deleteIcon = createElement(
       "i",
-      { className: "material-icons" },
+      { className: "material-icons material-delete" },
       "delete"
     );
     const editBtn = createElement(
@@ -132,10 +132,10 @@
 
     if (editMode) {
       label.innerText = editInput.value;
-      this.innerHTML = '<i class="material-icons">edit</i>';
+      this.innerHTML = '<i class="material-icons material-edit">edit</i>';
     } else {
       editInput.value = label.innerText;
-      this.innerHTML = '<i class="material-icons">save</i>';
+      this.innerHTML = '<i class="material-icons material-save">save</i>';
     }
     listItem.classList.toggle("editMode");
   }
@@ -154,4 +154,27 @@
       }
     });
   }
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDxEUCqzLZJjIDUw-E_cF9mqusb9d_cDPw",
+    authDomain: "todolist-6d9ba.firebaseapp.com",
+    databaseURL: "https://todolist-6d9ba.firebaseio.com",
+    projectId: "todolist-6d9ba",
+    storageBucket: "todolist-6d9ba.appspot.com",
+    messagingSenderId: "320355228892"
+  };
+  firebase.initializeApp(config);
+
+  firebase.auth().onAuthStateChanged(user => {
+    if (user) {
+      $("#signOut").on("click", e => {
+        firebase
+          .auth()
+          .signOut()
+          .then(e => {
+            window.location.href = "../public/register/login.html";
+          });
+      });
+    }
+  });
 })();

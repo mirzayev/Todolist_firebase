@@ -67,6 +67,9 @@ a:hover {
 .list-group-item.editMode label {
   display: none;
 }
+.list-group-item:hover .material-icons {
+  opacity: 1;
+}
 #todoList li,
 #completed li {
   display: flex;
@@ -79,4 +82,23 @@ a:hover {
 
 .disabled {
   pointer-events: none;
+}
+.material-icons {
+  opacity: 0.4;
+  transition: opacity 0.3s ease-in;
+}
+.material-delete,
+.material-edit,
+.material-save {
+  transition: color 0.3s ease-in;
+}
+
+.material-delete:hover {
+  color: red;
+}
+.material-edit:hover {
+  color: blue;
+}
+.material-save:hover {
+  color: green;
 }
