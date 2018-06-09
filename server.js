@@ -7,7 +7,7 @@ app.use(express.static(__dirname + "/public"));
 
 //routes
 app.get("/", function(req, res) {
-  res.render("/public/register/register.html");
+  res.render("/public/register/register");
 });
 
 app.listen(port, function() {
