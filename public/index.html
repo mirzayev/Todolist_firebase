@@ -35,7 +35,11 @@
 						</li>
 					</ul>
 					<form class="form-inline my-2 my-lg-0">
+						<i class="material-icons">
+							search
+						</i>
 						<input class="form-control mr-sm-2" type="text" placeholder="Search todo..." id="searchListitem">
+						<a href="#" class="email-holder"></a>
 						<button class="btn btn-secondary my-2 my-sm-0" type="button" id="signOut">Logout</button>
 					</form>
 				</div>
@@ -46,23 +50,34 @@
 		<section id="todo-section">
 			<div class="container">
 				<div class="row">
-					<div class="col-md-6">
+					<div class="col-md-6 well">
 						<form id="main-form">
 							<div class="form-group">
-								<input type="text" class="form-control" placeholder="Add todo..." id="todoInput" maxlength="40">
+								<input type="text" class="form-control mt-3" placeholder="Add todo..." id="todoInput" maxlength="40">
 							</div>
-							<button id="sendFirebase" type="submit" class="btn btn-outline-success pull-right">Add</button>
+							<button id="sendFirebase" type="submit" class="btn btn-default pull-right">Add</button>
 						</form>
+						<h5 class="text-center">Uncompleted tasks
+							<i class="material-icons disabled">
+								arrow_downward
+							</i>
+						</h5>
 						<ul class="list-group my-3" id="todoList">
 
 						</ul>
 						<hr>
+						<h5 class="text-center">Completed tasks
+							<i class="material-icons disabled">
+								arrow_downward
+							</i>
+						</h5>
+
 						<ul class="list-group my-3" id="completed">
 
 						</ul>
 					</div>
 					<div class="col-md-6">
-						<div class="section-logo">
+						<div class="section-logo mt-5">
 							<a target="_blank" title="Firebase official site" href="https://firebase.google.com/">
 								<img class="img-responsive" src="https://help.pandasuite.com/resources/AVfYf-idqsg5m25GTXvd/firebase-dot-png" alt="Firebase">
 							</a>

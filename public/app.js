@@ -29,6 +29,7 @@
 
     if (user) {
       current_user = user.uid;
+      $(".email-holder").html(user.email);
 
       // Sign out process--------------------------------------------
 

@@ -103,3 +103,21 @@ a:hover {
 .material-save:hover {
   color: green;
 }
+
+.email-holder {
+  color: #444;
+  background-color: #e4e4e4;
+  margin: 0 2em;
+  padding: 0.5em 2em;
+  border-radius: 3px;
+  box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.5);
+}
+
+.email-holder:hover {
+  background-color: #ffc825;
+  color: #444 !important;
+}
+
+.well {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
