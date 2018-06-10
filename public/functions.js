@@ -16,7 +16,7 @@ function createElement(tag, props, ...children) {
 
 // Create new list item
 
-function createTodoItem(title) {
+function createTodoItem(title, key) {
   const checkbox = createElement(
     "i",
     { className: "material-icons" },
@@ -49,6 +49,7 @@ function createTodoItem(title) {
     { className: "deleteBtn button" },
     deleteIcon
   );
+  deleteBtn.dataset.key = key;
   const buttonsDiv = createElement(
     "div",
     { className: "buttons" },
@@ -67,7 +68,7 @@ function createTodoItem(title) {
     editInput,
     buttonsDiv
   );
-  bindEvents(listItem);
+  //   bindEvents(listItem);
   return listItem;
 }
 

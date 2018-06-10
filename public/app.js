@@ -94,15 +94,31 @@
         completedList.innerHTML = "";
         snap.forEach(item => {
           const desc = item.val().description;
+          const itemKey = item.key;
           // checking completed todos, if true appending to
           // completedlist else appending to uncompleted list
           if (item.val().completed) {
-            const completedTodos = createTodoItem(desc);
+            const completedTodos = createTodoItem(desc, itemKey);
             toggleTodoFirebase(completedTodos);
           } else {
-            todoList.insertAdjacentElement("afterBegin", createTodoItem(desc));
+            todoList.insertAdjacentElement(
+              "afterBegin",
+              createTodoItem(desc, itemKey)
+            );
           }
         });
+      });
+      //-------------------------------------------------------------------------------
+      // Delete from database ---------------------------------------------------------
+
+      $("body").on("click", ".deleteBtn", function() {
+        const key = this.getAttribute("data-key");
+        firebase
+          .database()
+          .ref("users/" + current_user)
+          .child("todo")
+          .child(key)
+          .remove();
       });
     }
   });
