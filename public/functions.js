@@ -23,7 +23,7 @@ function createTodoItem(title, key) {
     "check_box_outline_blank"
   );
   const checkboxDiv = createElement("div", { className: "checkbox" }, checkbox);
-
+  checkboxDiv.dataset.key = key;
   const label = createElement("label", {}, title);
   const editInput = createElement("input", {
     type: "text",
@@ -44,6 +44,8 @@ function createTodoItem(title, key) {
     { className: "editBtn button" },
     editIcon
   );
+  editBtn.dataset.key = key;
+
   const deleteBtn = createElement(
     "button",
     { className: "deleteBtn button" },
@@ -100,18 +102,19 @@ function deleteTodoItem() {
   const listItem = this.parentNode.parentNode;
   listItem.parentNode.removeChild(listItem);
 }
-function editTodoItem() {
-  const listItem = this.parentNode.parentNode;
+function editTodoItem(el) {
+  const listItem = el.parentNode.parentNode;
   const label = listItem.querySelector("label");
+  const icon = listItem.querySelector("i.material-edit");
   const editInput = listItem.querySelector(".textfield");
   const editMode = listItem.classList.contains("editMode");
 
   if (editMode) {
     label.innerText = editInput.value;
-    this.innerHTML = '<i class="material-icons material-edit">edit</i>';
+    icon.innerHTML = '<i class="material-icons material-edit">edit</i>';
   } else {
     editInput.value = label.innerText;
-    this.innerHTML = '<i class="material-icons material-save">save</i>';
+    icon.innerHTML = '<i class="material-icons material-save">save</i>';
   }
   listItem.classList.toggle("editMode");
 }

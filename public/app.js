@@ -120,6 +120,42 @@
           .child(key)
           .remove();
       });
+      //-------------------------------------------------------------------------------
+      // Update checkbox state on database --------------------------------------------
+
+      $("body").on("click", ".checkbox", function() {
+        const key = this.getAttribute("data-key");
+        toggleTodoFirebase(this.parentElement);
+        const completed = this.parentElement.classList.contains("completed")
+          ? true
+          : false;
+
+        firebase
+          .database()
+          .ref("users/" + current_user)
+          .child("todo")
+          .child(key)
+          .child("completed")
+          .set(completed);
+      });
+
+      //-------------------------------------------------------------------------------
+      // Edit todoitem state on database ----------------------------------------------
+
+      $("body").on("click", ".editBtn", function(e) {
+        const key = this.getAttribute("data-key");
+        editTodoItem(this);
+        const newDesc = this.parentElement.parentElement.querySelector("label")
+          .innerText;
+
+        firebase
+          .database()
+          .ref("users/" + current_user)
+          .child("todo")
+          .child(key)
+          .child("description")
+          .set(newDesc);
+      });
     }
   });
 })();
