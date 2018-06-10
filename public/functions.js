@@ -132,7 +132,7 @@ function searchList() {
 
 function toggleTodoFirebase(el) {
   const completedList = document.querySelector("#completed");
-  el.classList.add("completed")
+  el.classList.toggle("completed")
     ? completedList.insertAdjacentElement("afterBegin", el)
     : todoList.insertAdjacentElement("beforeEnd", el);
   el.classList.contains("completed")

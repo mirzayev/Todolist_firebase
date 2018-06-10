@@ -91,13 +91,16 @@
         .child("todo");
       todoRef.on("value", snap => {
         todoList.innerHTML = "";
+        completedList.innerHTML = "";
         snap.forEach(item => {
           const desc = item.val().description;
-          todoList.insertAdjacentElement("afterBegin", createTodoItem(desc));
+          // checking completed todos, if true appending to
+          // completedlist else appending to uncompleted list
           if (item.val().completed) {
-            Array.from(todoList.children).forEach(child => {
-              child.classList.add("completed");
-            });
+            const completedTodos = createTodoItem(desc);
+            toggleTodoFirebase(completedTodos);
+          } else {
+            todoList.insertAdjacentElement("afterBegin", createTodoItem(desc));
           }
         });
       });
