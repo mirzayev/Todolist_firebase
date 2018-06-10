@@ -1,6 +1,6 @@
 $(document).ready(e => {
   // Initialize Firebase
-  var config = {
+   var config = {
     apiKey: "AIzaSyDxEUCqzLZJjIDUw-E_cF9mqusb9d_cDPw",
     authDomain: "todolist-6d9ba.firebaseapp.com",
     databaseURL: "https://todolist-6d9ba.firebaseio.com",
