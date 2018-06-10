@@ -13,13 +13,13 @@
   });
 
   // Initialize Firebase
-   var config = {
-    apiKey: "<API_KEY>",
-    authDomain: "<PROJECT_ID>.firebaseapp.com",
-    databaseURL: "https://<DATABASE_NAME>.firebaseio.com",
-    projectId: "<PROJECT_ID>",
-    storageBucket: "<BUCKET>.appspot.com",
-    messagingSenderId: "<SENDER_ID>",
+  var config = {
+    apiKey: "AIzaSyDxEUCqzLZJjIDUw-E_cF9mqusb9d_cDPw",
+    authDomain: "todolist-6d9ba.firebaseapp.com",
+    databaseURL: "https://todolist-6d9ba.firebaseio.com",
+    projectId: "todolist-6d9ba",
+    storageBucket: "todolist-6d9ba.appspot.com",
+    messagingSenderId: "320355228892"
   };
   firebase.initializeApp(config);
   let current_user = "";
